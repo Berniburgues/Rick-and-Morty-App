@@ -38,7 +38,7 @@ function Location({ name, type, dimension, residents }) {
                 className="font-bold px-4 py-2 mr-2 rounded-full bg-green-500 hover:bg-green-600 text-white"
                 onClick={() => setCurrentPage(currentPage - 1)}
               >
-                <span className="text-2xl">{'<'}</span>
+                <span className="text-2xl">⬅️</span>
               </button>
             )}
             {currentResidents.length === residentsPerPage && (
@@ -46,7 +46,7 @@ function Location({ name, type, dimension, residents }) {
                 className="font-bold px-4 py-2 rounded-full bg-green-500 hover:bg-green-600 text-white"
                 onClick={() => setCurrentPage(currentPage + 1)}
               >
-                <span className="text-2xl">{'>'}</span>
+                <span className="text-2xl">➡️</span>
               </button>
             )}
           </div>
