@@ -11,7 +11,7 @@ function Location({ name, type, dimension, residents }) {
   return (
     <div className="p-4">
       <h2 className="text-2xl font-bold">{name}</h2>
-      <div className="flex flex-wrap gap-14 mb-5 justify-center">
+      <div className="flex flex-wrap flex-grow gap-2  md:gap-14 md:text-base text-sm mb-5 justify-center">
         <p>
           <span className="text-green-600 font-bold">Type: </span> {type}
         </p>
@@ -25,9 +25,9 @@ function Location({ name, type, dimension, residents }) {
       </div>
       {residents && (
         <>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-5">
             {currentResidents.map((resident, urlResident) => (
-              <div key={urlResident} className="w-64">
+              <div key={urlResident} className="md:w-52 lg:w-72 w-auto h-auto">
                 <ResidentInfo urlResident={resident} />
               </div>
             ))}

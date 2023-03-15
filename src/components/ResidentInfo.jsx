@@ -25,13 +25,15 @@ const ResidentInfo = ({ urlResident }) => {
             <img
               src={residentInfo.image}
               alt={residentInfo.name}
-              className="rounded-full w-48 h-48 object-cover"
+              className="rounded-full w-28 h-28 md:w-48 md:h-48 object-cover"
             />
           </div>
           <div className="text-white flex-grow">
-            <h3 className="text-xl font-bold mb-2 text-center">{residentInfo.name}</h3>
+            <h3 className="md:text-xl lg:text-2xl text-base font-bold mb-2 text-center">
+              {residentInfo.name}
+            </h3>
             <hr className="mb-4 border-green-500" />
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-1 md:text-base text-sm">
               <div>
                 <p className="font-bold text-start text-red-400">SPECIE</p>
                 <p className="text-start text-gray-100">{residentInfo.species}</p>
@@ -46,15 +48,8 @@ const ResidentInfo = ({ urlResident }) => {
               </div>
               <div>
                 <p className="font-bold text-start text-blue-400">ORIGIN</p>
-                <p className="text-start text-gray-100">
-                  <a
-                    href={residentInfo.origin.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline hover:text-gray-500"
-                  >
-                    {residentInfo.origin.name}
-                  </a>
+                <p className="text-start text-gray-100 first-letter:uppercase">
+                  {residentInfo.origin.name}
                 </p>
               </div>
               <div>

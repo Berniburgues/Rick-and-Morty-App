@@ -49,21 +49,24 @@ function App() {
   return (
     <div className="bg-slate-900 min-h-screen text-white">
       <div className="flex flex-col items-center justify-center py-10">
+        <h1 className="md:text-6xl text-3xl text-green-500 font-bold font-mono text-center mb-5">
+          Rick and Morty Locations
+        </h1>
         <form
           onSubmit={handleLocationSubmit}
           className="flex flex-col items-center justify-center space-y-3"
         >
-          <div className="flex space-x-2">
+          <div className="flex space-x-2 mb-5">
             <input
               id="location-input"
               value={locationQuery}
               onChange={(e) => setLocationQuery(e.target.value)}
-              className="block w-72 p-2 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
+              className="block w-48 md:w-60 lg:w-96 p-2 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
               placeholder="Search location..."
             />
             <button
               type="submit"
-              className="px-4 py-2 bg-green-500 rounded-2xl hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
+              className="px-3 py-2 bg-green-500 rounded-2xl hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
             >
               Search
             </button>
@@ -87,9 +90,9 @@ function App() {
         </form>
         {data && (
           <>
-            <h1 className="text-6xl text-green-500 font-bold font-mono mt-10">
+            <h2 className="text-3xl md:text-5xl text-green-500 font-bold font-mono mt-10 text-center">
               {data.name}
-            </h1>
+            </h2>
             <Location
               type={data.type}
               dimension={data.dimension}
